@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async="" defer>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -36,26 +37,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >About me</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >My project</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Skills</a>
-            </li>
-          </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <div class="d-flex" role="search">
-            <button class="btn btn-outline-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              class="btn btn-primary"
+              id="myBtn"
+            >
               Contact Me 📬
             </button>
           </div>
@@ -63,25 +52,41 @@
       </div>
     </nav>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
+    </div>
 
     <section class="presentation container">
       <h1 class="text-center">Who is Wilfried ❔</h1>
@@ -97,7 +102,7 @@
               />
             </div>
             <div class="col-md-8">
-              <p style="margin-top: 40px">
+              <p>
                 Wilfried is a young Ivorian 🇨🇮 whose mind is one with
                 <code>technology</code> 💻. It's a bit too pretentious, I know,
                 but in all honesty tell me can we disassociate our world from
@@ -115,52 +120,99 @@
     </section>
 
     <section class="skills container">
-        <h1 class="text-center">My skills</h1>
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="assets/img/angular.png" width="100" height="100">
-                </div>
-                <div class="col-md-3">
-                    <img src="assets/img/laravel.png" width="100px">
-                </div>
-                <div class="col-md-3">
-                    <img src="assets/img/sharp.png" width="100px">
-                </div>
-                <div class="col-md-3">
-                    <img src="assets/img/vue.png"  width="80" height="80">
-                </div>
-               
-               
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-xs-6">
-                    <img src="assets/img/git.png" width="100px">
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <img src="assets/img/kubernetes.png" width="100px">
-                </div>
-                <div class="col-md-3">
-                    <img src="assets/img/jenkins.png" width="80">
-                </div>
-                
-                <div class="col-md-3">
-                    <img src="assets/img/docker.png" width="100">
-                </div>
-            </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <p>
+              <a> 💻 Web development </a>
+            </p>
+            <p>
+              <a> 📱 Mobile development </a>
+            </p>
+            <p>
+              <a> ⛓️ Blockchain development </a>
+            </p>
+            <p>
+              <a> 🍍 Devops (ci/cd) </a>
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div class="btn-section text-center" style="margin-top:10px ;">
-        <a class="btn btn-danger download"> Download my resume ⬇️</a>
+    <section class="skills network container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <p>
+              <a href="https://linkedIn.com/in/willElvire" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                 Linkedin 
+                </a
+              >
+            </p>
+            <p>
+              <a href="https://github.com/willElvire" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i> Github 
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="btn-section text-center" style="margin-top: 10px">
+      <a class="btn btn-danger download"> Download my resume ⬇️</a>
+    </div>
+
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+
+        <a
+          href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">About</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aliquid nemo modi deleniti a veritatis aut similique adipisci? Autem unde assumenda minima illo adipisci rerum ducimus blanditiis maxime excepturi cupiditate? </p>
+        </div>
+      
       </div>
   </body>
 
-
-  
-  
+ 
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -171,10 +223,16 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"
   ></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
-
-  
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="assets/js/main.js"></script>
 </html>
-
-
